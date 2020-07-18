@@ -1,0 +1,22 @@
+html {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header {
+    background-color: #1ABBF0;
+}
+h1 {
+    margin: 0;
+}
+button {
+    font-size: 1.5em;
+    color: #000;
+    background-color: #ff0;
+    border: none;
+    padding: 0 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transform: skew(-20deg);
+    -webkit-transition: background-color .3s ease;
+    -o-transition: background-color .3s ease;
+    transition: background-color .3s ease;
+}
