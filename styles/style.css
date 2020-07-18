@@ -5,6 +5,7 @@ header {
     background-color: #1ABBF0;
 }
 h1 {
+    color: white;
     margin: 0;
 }
 button {
@@ -19,4 +20,9 @@ button {
     -webkit-transition: background-color .3s ease;
     -o-transition: background-color .3s ease;
     transition: background-color .3s ease;
+    box-shadow: 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
+button:hover {
+    background-color: white;
+    color: black;
+  }
