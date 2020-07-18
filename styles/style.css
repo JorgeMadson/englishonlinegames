@@ -3,6 +3,7 @@ html {
 }
 header {
     background-color: #1ABBF0;
+    transform: skew(5deg);
 }
 h1 {
     color: white;
