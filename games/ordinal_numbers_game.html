@@ -4,16 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Games</title>
-    <!-- favicon -->
+    <title>Ordinal Numbers Game</title>
     <link rel="stylesheet" href="../styles/style.css">
+    <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
 </head>
 
-<body>
+<body onload="startGame()">
     <header>
         <div>
             <a href="/">
@@ -26,18 +26,28 @@
             <a class="button" href="/">Class Games</a> <!-- href="/multiplayergames" -->
         </nav>
     </header>
-
-    <main>
-        <ul>
-            <li class=""><a href="./ordinal_numbers_game.html"><strong>Ordinal Numbers</strong></a></li>
-            <li class="in_development">Game in development</li>
-            <li class="in_development">Game in development</li>
-            <li class="in_development">Game in development</li>
-            <li class="in_development">Game in development</li>
-            <li class="in_development">Game in development</li>
-            <li class="in_development">Game in development</li>
-        </ul>
+    <main class="main-game">
+        <div>
+            <canvas id="jogo" width="300" height="300"></canvas>
+        </div>
     </main>
+    <script>
+        function startGame() {
+            myGameArea.start();
+        }
+
+        var myGameArea = {
+            canvas: document.getElementById("jogo"),
+            start: function () {
+                this.canvas.width = parseInt(window.screen.availWidth / 2);
+                this.canvas.height = parseInt(window.screen.availHeight / 2);
+                this.context = this.canvas.getContext("2d");
+                this.context.font = "30px Comic Sans MS";
+                this.context.textAlign = "center";
+                this.context.fillText("Ordinal Numbers Game", this.canvas.width / 2, this.canvas.height / 2)
+            }
+        }
+    </script>
 </body>
 
 </html>
