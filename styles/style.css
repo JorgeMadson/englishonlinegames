@@ -1,9 +1,14 @@
+/*Update minified version to apply changes!*/
 body {
     display: grid;
     height: 98vh;
     width: 98vw;
     grid-template-rows: auto 1fr auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.dark-mode {
+    background-color: #022c43;
+    color: #eeeeee;
 }
 
 header {

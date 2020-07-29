@@ -39,13 +39,23 @@
             <a class="button" href="/games">Solo games</a> <!-- href="/singleplayergames" -->
             <a class="button" href="/">Class Games</a> <!-- href="/multiplayergames" -->
         </nav>
+        <!-- <button class="dark-mode" onclick="darkMode()">Dark mode</button> -->
+        <script>
+            function darkMode() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+            }
+            </script>
     </header>
     <main class="main">
-        <article><h4>First Game</h4></article>
-        <article class="in_development"><h4>Second Game</h4></article>
-        <article class="in_development"><h4>Third Game</h4></article>
-        <article class="in_development"><h4>Fourth Game</h4></article>
-        <article class="in_development"><h4>Fifth Game</h4></article>
+        <article><h2>First Game</h2>
+            <a class="button" href="/games/ordinal_numbers_game.html">Ordinal Numbers</a>
+        <p>Under Development</p>
+        </article>
+        <article class="in_development"><h2>Second Game</h2></article>
+        <article class="in_development"><h2>Third Game</h2></article>
+        <article class="in_development"><h2>Fourth Game</h2></article>
+        <article class="in_development"><h2>Fifth Game</h2></article>
     </main>
     <footer>
         <h6>
