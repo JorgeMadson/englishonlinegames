@@ -31,22 +31,7 @@
             <canvas id="jogo" width="300" height="300"></canvas>
         </div>
     </main>
-    <script>
-        function startGame() {
-            myGameArea.start();
-        }
-
-        var myGameArea = {
-            canvas: document.getElementById("jogo"),
-            start: function () {
-                this.canvas.width = parseInt(window.screen.availWidth / 2);
-                this.canvas.height = parseInt(window.screen.availHeight / 2);
-                this.context = this.canvas.getContext("2d");
-                this.context.font = "30px Comic Sans MS";
-                this.context.textAlign = "center";
-                this.context.fillText("Ordinal Numbers Game", this.canvas.width / 2, this.canvas.height / 2)
-            }
-        }
+    <script src="ordinal_numbers_game.min.js">
     </script>
 </body>
 
