@@ -3,7 +3,7 @@ function startGame() {
 }
 
 var myGameArea = {
-    timeToRespond: 5,
+    timeToRespond: 3,
     refreshTime: 1000,
     canvas: document.getElementById("jogo"),
     start: function () {
@@ -34,6 +34,6 @@ var myGameArea = {
     timeOver: function () {
         clearInterval(this.interval);
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        this.context.fillText("Game over", this.canvas.width / 2, this.canvas.height / 2)
+        this.context.fillText("Still under development...", this.canvas.width / 2, this.canvas.height / 2)
     }
 }
