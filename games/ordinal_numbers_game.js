@@ -12,8 +12,10 @@ var myGameArea = {
         this.context = this.canvas.getContext("2d");
         this.context.font = "30px Comic Sans MS";
         this.context.textAlign = "center";
-        this.context.fillText("Ordinal Numbers Game", this.canvas.width / 2, this.canvas.height / 2)
+        this.context.fillText("Ordinal Numbers Game", this.canvas.width / 2, this.canvas.height / 2);
         this.updateTimer(this.timeToRespond);
+        //Adicionar o evento pra começar
+        // this.canvas.addEventListener("click", this.updateTimer(this.timeToRespond));
     },
     showTimer: function showTimer(remainingTime) {
         this.context.font = "20px Comic Sans MS";
