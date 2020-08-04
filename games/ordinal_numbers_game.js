@@ -1,5 +1,7 @@
 function startGame() {
-    myGameArea.start();
+setTimeout(() => {
+    document.getElementById("jogo").innerHTML ="<strong>Time is over bitch!</strong>";
+}, 5000);
 }
 
 var myGameArea = {
