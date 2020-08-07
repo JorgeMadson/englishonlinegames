@@ -12,7 +12,7 @@ function startGame() {
             gameOver()
         }
     }, 3000);
-    
+
 }
 function injectQuestion() {
     const firstNumber = getRandomIntInclusive(1, 25);
@@ -52,7 +52,7 @@ function gameOver() {
 }
 
 const numbersList = [
-    { cardinal : 0, cardinalSpelled: '0', ordinal: '0', ordinalSpelled: '0'},
+    { cardinal: 0, cardinalSpelled: '0', ordinal: '0', ordinalSpelled: '0' },
 
     { cardinal: 1, cardinalSpelled: 'One', ordinal: '1st', ordinalSpelled: 'First' },
 
