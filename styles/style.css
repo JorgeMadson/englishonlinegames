@@ -100,3 +100,8 @@ li {
 canvas {
     border: solid 1px;
 }
+#jogo{
+    width: 80%;
+    height: 80%;
+    border: 1px black solid;
+}

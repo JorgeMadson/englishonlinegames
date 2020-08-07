@@ -11,9 +11,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
-<body onload="startGame()">
+<body>
     <header>
         <div>
             <a href="/">
@@ -27,9 +28,12 @@
         </nav>
     </header>
     <main class="main-game">
-        <div>
-            <canvas id="jogo" width="300" height="300"></canvas>
+        <h2>Ordinal Numbers Game</h2>
+        <p>Choose the right numbers to earn points, you have 3s.</p>
+        <div id="jogo" class="main-game">
+            <button id="startButton" onclick="startGame();" class="button">Start</button class="button">
         </div>
+
     </main>
     <script src="ordinal_numbers_game.min.js">
     </script>
