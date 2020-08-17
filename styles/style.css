@@ -1,8 +1,8 @@
 /*Update minified version to apply changes!*/
 body {
     display: grid;
-    height: 98vh;
-    width: 98vw;
+    height: 96vh;
+    width: 96vw;
     grid-template-rows: auto 1fr auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

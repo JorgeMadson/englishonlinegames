@@ -1,37 +1,46 @@
 "use strict";
 let counter = 1;
 const turnQuantity = 3;
+const timeToAnswer = 5000;
+const minNumber = 1;
+const maxNumber = 30;
+let pontos = 0;
 function startGame() {
+    pontos = 0;
     document.getElementById("jogo").innerHTML = injectQuestion();
     counter++;
-    const intervalCode = setInterval(() => {
+    const timerId = setInterval(() => {
         document.getElementById("jogo").innerHTML = injectQuestion();
-        counter++;
         if (counter > turnQuantity) {
-            clearInterval(intervalCode)
-            gameOver()
+            clearInterval(timerId);
+            gameOver();
         }
-    }, 3000);
+        counter++;
+    }, timeToAnswer);
 
 }
+function contagemDePontos(incremento) {
+    pontos += incremento;
+}
 function injectQuestion() {
-    const firstNumber = getRandomIntInclusive(1, 25);
-    let secondNumber = getRandomIntInclusive(1, 25);
+    const firstNumber = getRandomIntInclusive(minNumber, maxNumber);
+    let secondNumber = getRandomIntInclusive(minNumber, maxNumber);
 
     while (firstNumber == secondNumber)
-        secondNumber = getRandomIntInclusive(1, 25);
+        secondNumber = getRandomIntInclusive(minNumber, maxNumber);
 
     const rightNumber = getRandomIntInclusive(firstNumber, secondNumber);
     //TODO:Get a number that is not in the rightNumber range
-    const wrongNumber = getRandomIntInclusive(1, 25);
+    const wrongNumber = getRandomIntInclusive(minNumber, maxNumber);
 
     console.table(rightNumber, wrongNumber);
     return `<p>${numbersList[counter].ordinalSpelled} of ${turnQuantity} turns</p>
-    <p>Between <strong>${firstNumber}</strong> and <strong>${secondNumber}</strong> </p>
-    <input type="radio" name="firstQuestion" id="${rightNumber}" value="${rightNumber}">
-    <label for="${rightNumber}">${numbersList[rightNumber].ordinalSpelled}</label>
-    <input type="radio" name="firstQuestion" id="${wrongNumber}" value="${wrongNumber}">
-    <label for="${wrongNumber}">${numbersList[wrongNumber].ordinalSpelled}</label>`;
+    <p>Between <strong>${firstNumber}</strong> and <strong>${secondNumber}</strong></p>
+    <div>
+        <button onclick="contagemDePontos(1)" class="button">${numbersList[rightNumber].ordinalSpelled}</button>
+        <button onclick="contagemDePontos(0)" class="button">${numbersList[wrongNumber].ordinalSpelled}</button>
+    </div>`;
+
 }
 
 function getRandomIntInclusive(min, max) {
@@ -44,7 +53,7 @@ function gameOver() {
     counter = 1;
     document.getElementById("jogo").innerHTML = `
     <p>Well done!</p>
-    <p>Your score is ${NaN}</p>
+    <p>Your score is ${pontos}</p>
     <lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_4uTjNk.json"  background="transparent"  speed="1"  style="width: 100%; height: 300px;"  loop  autoplay></lottie-player>
     <p></p>
     <button class="button" onclick="startGame();">Play again</button>
@@ -104,7 +113,13 @@ const numbersList = [
 
     { cardinal: 25, cardinalSpelled: 'Twenty five', ordinal: '25th', ordinalSpelled: 'Twenty-fifth' },
 
-    // { cardinal : …, cardinalSpelled: '…', ordinal: '…', ordinalSpelled: '…'},
+    { cardinal: 26, cardinalSpelled: 'Twenty six', ordinal: '6th', ordinalSpelled: 'Twenty-sixth' },
+
+    { cardinal: 27, cardinalSpelled: 'Twenty seven', ordinal: '7th', ordinalSpelled: 'Twenty-seventh' },
+
+    { cardinal: 28, cardinalSpelled: 'Twenty eight', ordinal: '8th', ordinalSpelled: 'Twenty-eighth' },
+
+    { cardinal: 29, cardinalSpelled: 'Twenty nine', ordinal: '9th', ordinalSpelled: 'Twenty-ninth' },
 
     { cardinal: 30, cardinalSpelled: 'Thirty', ordinal: '30th', ordinalSpelled: 'Thirtieth' },
 
