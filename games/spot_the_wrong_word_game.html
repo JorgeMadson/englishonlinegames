@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spot the Wrong Word</title>
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <link rel="stylesheet" href="wrong-word.css">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- ads -->
+    <script data-ad-client="ca-pub-4063203709466956" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67885502-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-67885502-3');
+    </script>
+    <script src="/js/darkMode.js"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="/">
+                <h1 title="The best place to practive your english">ENGLISH ONLINE GAMES</h1>
+            </a>
+        </div>
+        <nav>
+            <a class="button" href="/games">All games</a>
+            <a class="button" href="/games">Solo games</a>
+            <a class="button" href="/">Class Games</a>
+            <button title="Dark mode" id="dark-switcher" class="dark-mode" onclick="darkMode()">💡</button>
+        </nav>
+    </header>
+    <main class="main-game">
+        <h2>Spot the Wrong Word</h2>
+        <p>Shoot the wrong words to earn points, you have 20s.</p>
+        <div id="jogo" class="main-game">
+            <!-- <button id="startButton" onclick="startGame();" class="button">Start</button class="button"> -->
+            <div class="wrapper">
+                <div class="timer">
+                    <span></span>
+                </div>
+                <div class="gameover">End</div>
+                <!-- <h1>KILL THE BIRDS <span>(shoot the birds)</span></h1> -->
+                <input class="input-circle input-circle1" type="radio" id="circle1">
+                <input class="input-circle input-circle2" type="radio" id="circle2">
+                <input class="input-circle input-circle3" type="radio" id="circle3">
+                <input class="input-circle input-circle4" type="radio" id="circle4">
+                <input class="input-circle input-circle5" type="radio" id="circle5">
+                <input class="input-circle input-circle6" type="radio" id="circle6">
+
+                <label for="circle1" class="pajaro pajaro1"><span></span></label>
+                <label for="circle2" class="pajaro pajaro2"><span></span></label>
+                <label for="circle3" class="pajaro pajaro3"><span></span></label>
+                <label for="circle4" class="pajaro pajaro4"><span></span></label>
+                <label for="circle5" class="pajaro pajaro5"><span></span></label>
+                <label for="circle6" class="pajaro pajaro6"><span></span></label>
+                <div class="sum">SCORE:</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>English Online Games, the best place to practice.</p>
+    </footer>
+    <script src="ordinal_numbers_game.min.js"></script>
+</body>
+</html>

@@ -109,3 +109,7 @@ canvas {
     height: 80%;
     border: 1px black solid;
 }
+footer {
+    display: flex;
+    justify-content: flex-end;
+}
