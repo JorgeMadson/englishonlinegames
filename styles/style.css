@@ -10,7 +10,11 @@ body {
     background-color: #022c43;
     color: #eeeeee;
 }
-
+#dark-switcher {
+    position: absolute;
+    top: 1ch;
+    right: 1ch;
+}
 header {
     background-color: #1ABBF0;
     transform: skew(-20deg);

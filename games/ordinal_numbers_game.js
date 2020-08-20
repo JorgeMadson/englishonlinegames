@@ -33,7 +33,6 @@ function injectQuestion() {
     //TODO:Get a number that is not in the rightNumber range
     const wrongNumber = getRandomIntInclusive(minNumber, maxNumber);
 
-    console.table(rightNumber, wrongNumber);
     return `<p>${numbersList[counter].ordinalSpelled} of ${turnQuantity} turns</p>
     <p>Between <strong>${firstNumber}</strong> and <strong>${secondNumber}</strong></p>
     <div>
