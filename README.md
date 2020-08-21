@@ -8,6 +8,7 @@ Referências visuais:
 ## botão do esc:
 ![botão do esc](https://github.com/JorgeMadson/englishonlinegames/blob/referencias-visuais/referencias%20visuais/botão%20do%20esc.png)
 ## cores:
+![cores](https://github.com/JorgeMadson/englishonlinegames/blob/referencias-visuais/collage.jpeg)
 ![cores](https://github.com/JorgeMadson/englishonlinegames/blob/referencias-visuais/referencias%20visuais/cores.png)
 ## fortnite loading screen:
 ![fortnite loading screen](https://github.com/JorgeMadson/englishonlinegames/blob/referencias-visuais/referencias%20visuais/fortnite%20loading%20screen.png)
