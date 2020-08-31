@@ -1,4 +1,15 @@
 /*Update minified version to apply changes!*/
+/* Colors:
+#ffffff; #00c4f7; #f8ff15; #084581; #b8b4b3
+
+*/
+.colors {
+    color: #ffffff; 
+    color: #b8b4b3;
+    color: #00c4f7; 
+    color: #f8ff15; 
+    color: #084581; 
+}
 body {
     display: grid;
     height: 96vh;
@@ -7,7 +18,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .dark-mode {
-    background-color: #022c43;
+    background-color: #084581;
     color: #eeeeee;
 }
 #dark-switcher {
