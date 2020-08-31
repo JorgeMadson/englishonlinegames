@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="../styles/style.min.css">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- ads -->
+    <script data-ad-client="ca-pub-4063203709466956" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67885502-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-67885502-3');
+    </script>
+    <script src="/js/darkMode.js"></script>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="/">
+                <h1 title="The best place to practive your english">ENGLISH ONLINE GAMES</h1>
+            </a>
+        </div>
+        <nav>
+            <a class="button" href="/games">All games</a>
+            <a class="button" href="/games">Solo games</a>
+            <!-- href="/singleplayergames" -->
+            <a class="button" href="/">Class Games</a>
+            <!-- href="/multiplayergames" -->
+            <button title="Dark mode" id="dark-switcher" class="dark-mode" onclick="darkMode()">💡</button>
+        </nav>
+    </header>
+    <style>
+        .game-board {
+            width: auto;
+            height: 100%;
+            margin: 0 auto;
+            color: #fff;
+            border: 0.5rem solid #2c3e50;
+            border-radius: 1rem;
+
+            display: grid;
+            grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+        }
+
+        .box {
+            border: 0.5rem solid #2c3e50;
+            font-family: Helvetica;
+            font-weight: bold;
+            font-size: 4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <main class="main-game">
+        <div class="game-board">
+            <div class="box"><input type="text"></div>
+            <div class="box"><input type="text"></div>
+            <div class="box"><input type="text"></div>
+            <div class="box"><input type="text"></div>
+            <div class="box"><input type="text"></div>
+            <div class="box"><input type="text"></div>
+            <div class="box"><input type="text"></div>
+            <div class="box"><input type="text"></div>
+            <div class="box"><input type="text"></div>
+        </div>
+    </main>
+    <footer>
+        <p>English Online Games, the best place to practice.</p>
+    </footer>
+</body>
+
+</html>
