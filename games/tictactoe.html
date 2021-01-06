@@ -11,11 +11,10 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- ads -->
     <script data-ad-client="ca-pub-4063203709466956" async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67885502-3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -26,7 +25,7 @@
     <script src="/js/darkMode.js"></script>
 </head>
 
-<body>
+<body class="dark-mode">
     <header>
         <div>
             <a href="/">
@@ -64,7 +63,6 @@
 
         .box {
             border: 0.5rem solid #2c3e50;
-            font-family: Helvetica;
             font-weight: bold;
             display: flex;
             justify-content: center;
@@ -78,6 +76,9 @@
         }
     </style>
     <main class="main-game">
+        <button onclick="populateBoxes()" class="button">Populate with random words</button>
+        <button onclick="clearBoxes()" class="button">Clear all words</button>
+
         <div class="game-board">
             <div class="box"><input type="text"></div>
             <div class="box"><input type="text"></div>
@@ -100,12 +101,7 @@
         <p>English Online Games, the best place to practice.</p>
     </footer>
     <script src="web-speech-api_script.js"></script>
-    <script>
-        const game = document.querySelector('.game-board');
-        game.onmousedown = function eventHandler(e) {
-            speak(e.target);
-        };
-    </script>
+    <script src="tictactoe.js"></script>
 </body>
 
 </html>

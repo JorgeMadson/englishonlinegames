@@ -13,7 +13,6 @@
 body {
     display: grid;
     height: 100vh;
-    width: 96vw;
     grid-template-rows: auto 1fr auto;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -23,8 +22,8 @@ body {
 }
 #dark-switcher {
     position: absolute;
-    top: 1ch;
-    right: 1ch;
+    top: 0;
+    right: 4ch;
 }
 header {
     background-color: #1ABBF0;
@@ -33,6 +32,8 @@ header {
     justify-content: space-around;
     place-items: center;
     padding: 0 1ch;
+    width: 95%;
+    justify-self: center;
 }
 
 h1 {

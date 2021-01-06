@@ -1,0 +1,1 @@
+//Get all .js .css and .html and minify
