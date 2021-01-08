@@ -1,15 +1,49 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
+    <link rel="icon" href=".<%= BASE_URL %>favicon.ico">
+    <title><%= VUE_APP_TITLE %></title>
+    <meta name="description" content="A free web site for students and teachers to learn and practice English by playing games. There is a selection of games that students can practice English in a fun and ligher way.">
+    <link rel="stylesheet" href=".<%= BASE_URL %>styles/style.min.css">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href=".<%= BASE_URL %>site.webmanifest">
+    <!-- ads -->
+    <!-- <script data-ad-client="ca-pub-4063203709466956" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-67885502-3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-67885502-3');
+    </script> -->
+    <script src=".<%= BASE_URL %>js/darkMode.js"></script>
+</head>
+  <body class="dark-mode">
+    <header>
+      <div>
+          <a href="/">
+              <h1 style="text-transform: uppercase;" title="The best place to practive your english"><%= VUE_APP_TITLE %></h1>
+          </a>
+      </div>
+      <nav>
+          <a class="button" href="/games">All games</a>
+          <a class="button" href="/games">Solo games</a>
+          <a class="button" href="/">Class Games</a>
+          <button title="Dark mode" id="dark-switcher" class="dark-mode" onclick="darkMode()">💡</button>
+      </nav>
+  </header>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>
+        <p><%= VUE_APP_TITLE %> works better JavaScript enabled.</p>
+         <p>When have a version without JavaScript <a href="/">here</a> but not all games will work properly.</p>
+      </strong>
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->

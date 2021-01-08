@@ -1,15 +1,13 @@
 /*Update minified version to apply changes!*/
-/* Colors:
-#ffffff; #00c4f7; #f8ff15; #084581; #b8b4b3
 
-*/
-.colors {
-    color: #ffffff; 
-    color: #b8b4b3;
-    color: #00c4f7; 
-    color: #f8ff15; 
-    color: #084581; 
-}
+:root {
+    --white-color:       #f0f0f0;
+    --gray-color:        #b8b4b3;
+    --blue-light-color:  #00c4f7;
+    --yellow-color:      #FFFF00;
+    --blue-dark-color:   #084581;
+  }
+
 body {
     display: grid;
     height: 100vh;
@@ -17,7 +15,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .dark-mode {
-    background-color: #084581;
+    background-color: var(--blue-dark-color);
     color: #eeeeee;
 }
 #dark-switcher {
@@ -26,7 +24,7 @@ body {
     right: 4ch;
 }
 header {
-    background-color: #1ABBF0;
+    background-color: var(--blue-light-color);
     transform: skew(-20deg);
     display: flex;
     justify-content: space-around;
@@ -88,22 +86,21 @@ article:nth-child(even) {
 
 .button {
     font-size: 1.5rem;
-    color: #000;
-    background-color: #ff0;
+    color: black;
+    background-color: var(--yellow-color);
     border: none;
     padding: 0 1ch;
     text-decoration: none;
     text-transform: uppercase;
     transform: skew(-20deg);
-    -webkit-transition: background-color .3s ease;
-    -o-transition: background-color .3s ease;
-    transition: background-color .3s ease;
+    /* -webkit-transition: background-color .5s ease;
+    -o-transition: background-color .5s ease;
+    transition: background-color .5s ease; */
     box-shadow: 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .button:hover {
     background-color: white;
-    color: black;
 }
 
 ul {
