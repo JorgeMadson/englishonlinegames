@@ -1,5 +1,7 @@
 # englishonlinegames
 
+[![Front‑End_Checklist followed](https://img.shields.io/badge/Front‑End_Checklist-followed-brightgreen.svg)](https://github.com/thedaviddias/Front-End-Checklist/)
+
 ```Converting Vanilla app to Vue 3 app```
 
 ## Project setup
