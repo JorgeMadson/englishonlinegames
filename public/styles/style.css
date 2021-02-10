@@ -12,7 +12,14 @@ body {
     display: grid;
     height: 100vh;
     grid-template-rows: auto 1fr auto;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* Font */
+    src: url(".<%= BASE_URL %>/style.Exo2-VariableFont_wght.ttf");
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .dark-mode {
     background-color: var(--blue-dark-color);
@@ -70,13 +77,11 @@ a {
 article {
     /* If we do want the items to stretch: */
     flex: 1 1 300px;
-    /* color: white; */
     /* etc. */
-    border: 1px solid black;
+    border: 2px solid black;
     transform: skew(2deg);
-    margin: 1ch;
-    /* background: #1ABBF0; */
-    font-size: 2rem;
+    margin: 4ch;
+    padding: 2ch;
     text-align: center;
 }
 
