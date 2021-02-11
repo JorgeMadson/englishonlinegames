@@ -1,5 +1,3 @@
-/*Update minified version to apply changes!*/
-
 :root {
     --white-color:       #f0f0f0;
     --gray-color:        #b8b4b3;
@@ -10,10 +8,9 @@
 
 body {
     display: grid;
-    height: 100vh;
     grid-template-rows: auto 1fr auto;
     /* Font */
-    src: url(".<%= BASE_URL %>/style.Exo2-VariableFont_wght.ttf");
+    src: url(Exo2-VariableFont_wght.ttf);
     font-family: 'Exo 2', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -122,8 +119,4 @@ canvas {
     width: 80%;
     height: 80%;
     border: 1px black solid;
-}
-footer {
-    display: flex;
-    justify-content: flex-end;
 }
