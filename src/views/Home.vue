@@ -1,25 +1,27 @@
 <template>
   <main class="main">
-    <card-game title="Pronunciation TicTacToe" />
-    <card-game />
-    <card-game />
-    <card-game />
-    <card-game />
-    <card-game />
+    <game-card
+      title="Pronunciation TicTacToe"
+      path="tictactoe"
+    />
+    <game-card title="Ordianl Numbers" />
+    <game-card />
+    <game-card />
+    <game-card />
     <home-footer />
   </main>
 </template>
 
 <script>
 // @ is an alias to /src
-import CardGame from '../components/CardGame.vue';
-import HomeFooter from '../components/HomeFooter.vue';
+import GameCard from "../components/GameCard.vue";
+import HomeFooter from "../components/HomeFooter.vue";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    CardGame,
-    HomeFooter
-  }
-}
+    GameCard,
+    HomeFooter,
+  },
+};
 </script>
