@@ -80,10 +80,15 @@ article {
     margin: 4ch;
     padding: 2ch;
     text-align: center;
+    background-image: linear-gradient(#00c4f7, #b8b4b3);
 }
 
 article:nth-child(even) {
     transform: skew(-2deg);
+}
+
+article.in_development {
+    background-image: initial;
 }
 
 .button {

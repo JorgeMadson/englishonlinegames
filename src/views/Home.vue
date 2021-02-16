@@ -3,10 +3,11 @@
     <game-card
       title="Pronunciation TicTacToe"
       path="tictactoe"
+      :developed="true"
     />
-    <game-card title="Ordianl Numbers" />
-    <game-card />
-    <game-card />
+    <game-card
+      title="Ordinal Numbers"
+    />
     <game-card />
     <home-footer />
   </main>

@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <p>You can see a list of all games here</p>
-    <router-view />
-  </div>
+  <router-view />
 </template>
 
 <script>

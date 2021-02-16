@@ -1,26 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router'
-// import Home from '../views/Home.vue'
-// import Games from '../views/Games.vue'
-// import TicTacToePronunciation from '../components/games/TicTacToePronunciation.vue'
+import Home from '../views/Home.vue'
+const Test = `<template><h1>teste</h1></template>`;
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import(/* webpackChunkName: "home" */ '../views/Home.vue'),
+    component: Home
 
   },
   {
     path: '/games',
     name: 'games',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "games" */ '../views/Games.vue'),
     children: [
-      // UserHome will be rendered inside User's <router-view>
-      // when /user/:id is matched
+      { path: '', name: 'games', component: () => import(/* webpackChunkName: "games" */ '../views/Games.vue'), },
       { path: 'tictactoe', name: 'tictactoe', component: () => import(/* webpackChunkName: "tictactoe" */ '../components//games/TicTacToePronunciation.vue'), },
+      { path: 'teste', name: 'teste', component: Test },
+
     ]
   }
 ]
