@@ -1,15 +1,28 @@
 <template>
   <main class="main-game">
-    <button :onclick="populateBoxes" class="button">
+    <button
+      :onclick="populateBoxes"
+      class="button"
+    >
       Populate with random words
     </button>
-    <button :onclick="clearBoxes" class="button">
+    <button
+      :onclick="clearBoxes"
+      class="button"
+    >
       Clear words
     </button>
 
     <div class="game-board">
-      <div class="box" v-for="(word, index) in wordsList" :key="index">
-        <input type="text" :value="word" />
+      <div
+        class="box"
+        v-for="(word, index) in wordsList"
+        :key="index"
+      >
+        <input
+          type="text"
+          :value="word"
+        >
       </div>
     </div>
   </main>
@@ -75,8 +88,8 @@ const fullList = [
   "Temperature",
   "Truculent",
   "Worcestershire",
-  "Zephyr",
-  ];
+  "Zephyr"
+];
 export default {
   data() {
     return {
