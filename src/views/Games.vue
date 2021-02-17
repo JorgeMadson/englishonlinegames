@@ -1,4 +1,5 @@
 <template>
+  <p>Games!</p>
   <router-view />
 </template>
 
