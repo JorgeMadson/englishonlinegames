@@ -1,23 +1,25 @@
-/*Update minified version to apply changes!*/
-/* Colors:
-#ffffff; #00c4f7; #f8ff15; #084581; #b8b4b3
+:root {
+    --white-color:       #f0f0f0;
+    --gray-color:        #b8b4b3;
+    --blue-light-color:  #00c4f7;
+    --yellow-color:      #FFFF00;
+    --blue-dark-color:   #084581;
+  }
 
-*/
-.colors {
-    color: #ffffff; 
-    color: #b8b4b3;
-    color: #00c4f7; 
-    color: #f8ff15; 
-    color: #084581; 
-}
 body {
     display: grid;
-    height: 100vh;
     grid-template-rows: auto 1fr auto;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* Font */
+    src: url(Exo2-VariableFont_wght.ttf);
+    font-family: 'Exo 2', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .dark-mode {
-    background-color: #084581;
+    background-color: var(--blue-dark-color);
     color: #eeeeee;
 }
 #dark-switcher {
@@ -26,7 +28,7 @@ body {
     right: 4ch;
 }
 header {
-    background-color: #1ABBF0;
+    background-color: var(--blue-light-color);
     transform: skew(-20deg);
     display: flex;
     justify-content: space-around;
@@ -72,38 +74,40 @@ a {
 article {
     /* If we do want the items to stretch: */
     flex: 1 1 300px;
-    /* color: white; */
     /* etc. */
-    border: 1px solid black;
+    border: 2px solid black;
     transform: skew(2deg);
-    margin: 1ch;
-    /* background: #1ABBF0; */
-    font-size: 2rem;
+    margin: 4ch;
+    padding: 2ch;
     text-align: center;
+    background-image: linear-gradient(#00c4f7, #b8b4b3);
 }
 
 article:nth-child(even) {
     transform: skew(-2deg);
 }
 
+article.in_development {
+    background-image: initial;
+}
+
 .button {
     font-size: 1.5rem;
-    color: #000;
-    background-color: #ff0;
+    color: black;
+    background-color: var(--yellow-color);
     border: none;
     padding: 0 1ch;
     text-decoration: none;
     text-transform: uppercase;
     transform: skew(-20deg);
-    -webkit-transition: background-color .3s ease;
-    -o-transition: background-color .3s ease;
-    transition: background-color .3s ease;
+    /* -webkit-transition: background-color .5s ease;
+    -o-transition: background-color .5s ease;
+    transition: background-color .5s ease; */
     box-shadow: 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
 .button:hover {
     background-color: white;
-    color: black;
 }
 
 ul {
@@ -120,8 +124,4 @@ canvas {
     width: 80%;
     height: 80%;
     border: 1px black solid;
-}
-footer {
-    display: flex;
-    justify-content: flex-end;
 }
