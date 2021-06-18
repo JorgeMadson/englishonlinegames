@@ -30,70 +30,39 @@
 
 <script>
 const fullList = [
-  "Accede",
-  "Alias",
-  "Anathema",
-  "Anemone",
-  "Anemone",
-  "Antarctic",
-  "Boatswain",
-  "Brewery",
-  "Cache",
-  "Camaraderie",
-  "Cavalry",
-  "Choir",
-  "Colonel",
-  "Comfortable",
-  "Conch",
-  "Defibrillator",
-  "Deteriorate",
-  "Draught",
-  "Epitome",
-  "Espouse",
-  "Espresso",
-  "Explicit",
-  "Exponentially",
-  "Faux",
-  "Floccinaucinihilipilification",
-  "Ignominious",
-  "Isthmus",
-  "Knell",
-  "Know",
-  "Library",
-  "Mauve",
-  "Mischievous",
-  "Nadir",
-  "Neophyte",
-  "Often",
-  "Onamatopeia",
-  "Otorhinolaryngologist",
-  "Panacea",
-  "Penguin",
-  "Phenomenon",
-  "Phlegmatic",
-  "Posthumous",
-  "Puerile",
-  "Quinoa",
-  "Quixotic",
-  "Rural",
-  "Sanguine",
-  "Segue",
-  "Sixth",
-  "Specific",
-  "Squirrel",
-  "Staid",
-  "Successful",
-  "Surfeit",
-  "Synecdoche",
-  "Temperature",
-  "Truculent",
-  "Worcestershire",
+  "Accede", "Alias", "Anathema", "Anemone", "Anemone", "Antarctic", "Boatswain", "Brewery", "Cache", "Camaraderie", "Cavalry", "Choir", "Colonel",
+  "Comfortable", "Conch", "Defibrillator", "Deteriorate", "Draught", "Epitome", "Espouse", "Espresso", "Explicit", "Exponentially", "Faux",
+  "Floccinaucinihilipilification", "Ignominious", "Isthmus", "Knell", "Know", "Library", "Mauve", "Mischievous", "Nadir", "Neophyte", "Often",
+  "Onamatopeia", "Otorhinolaryngologist", "Panacea", "Penguin", "Phenomenon", "Phlegmatic", "Posthumous", "Puerile", "Quinoa", "Quixotic", "Rural",
+  "Sanguine", "Segue", "Sixth", "Specific", "Squirrel", "Staid", "Successful", "Surfeit", "Synecdoche", "Temperature", "Truculent", "Worcestershire",
   "Zephyr",
 ];
+
+// I took this algorithm from here:
+// https://stackoverflow.com/questions/962802/is-it-correct-to-use-javascript-array-sort-method-for-shuffling
+function shuffle(array) {
+  var tmp,
+    current,
+    top = array.length;
+
+  if (top)
+    while (--top) {
+      current = Math.floor(Math.random() * (top + 1));
+      tmp = array[current];
+      array[current] = array[top];
+      array[top] = tmp;
+    }
+
+  return array;
+}
+
 export default {
+  watch: {
+    $route(){}
+  },
   data() {
     return {
-      wordsList: fullList.slice(0, 9),
+      wordsList: shuffle(fullList).slice(0, 9),
     };
   },
   methods: {
@@ -104,24 +73,6 @@ export default {
       }
     },
     populateBoxes() {
-      // I took this algorithm from here:
-      // https://stackoverflow.com/questions/962802/is-it-correct-to-use-javascript-array-sort-method-for-shuffling
-      function shuffle(array) {
-        var tmp,
-          current,
-          top = array.length;
-
-        if (top)
-          while (--top) {
-            current = Math.floor(Math.random() * (top + 1));
-            tmp = array[current];
-            array[current] = array[top];
-            array[top] = tmp;
-          }
-
-        return array;
-      }
-
       this.wordsList = shuffle(fullList).slice(0, 9);
     },
 
