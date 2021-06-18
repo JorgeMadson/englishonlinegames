@@ -88,30 +88,47 @@ const fullList = [
   "Temperature",
   "Truculent",
   "Worcestershire",
-  "Zephyr"
+  "Zephyr",
 ];
 export default {
   data() {
     return {
-      wordsList: fullList.slice(0, 9)
+      wordsList: fullList.slice(0, 9),
     };
   },
   methods: {
     speak(e) {
       if (e.target.value) {
         console.warn(`Vai falar: ${e.target.value}`);
-        speak("hi");
+        // speak("hi");
       }
     },
     populateBoxes() {
-      const shuffled = fullList.sort(() => Math.random() - 0.5);
-      this.wordsList = shuffled.slice(0, 9);
+      // I took this algorithm from here:
+      // https://stackoverflow.com/questions/962802/is-it-correct-to-use-javascript-array-sort-method-for-shuffling
+      function shuffle(array) {
+        var tmp,
+          current,
+          top = array.length;
+
+        if (top)
+          while (--top) {
+            current = Math.floor(Math.random() * (top + 1));
+            tmp = array[current];
+            array[current] = array[top];
+            array[top] = tmp;
+          }
+
+        return array;
+      }
+
+      this.wordsList = shuffle(fullList).slice(0, 9);
     },
 
     clearBoxes() {
       this.wordsList = this.wordsList.map(() => "");
-    }
-  }
+    },
+  },
 };
 </script>
 
