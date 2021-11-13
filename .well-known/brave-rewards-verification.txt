@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: englishonlinegames.com
+Token: 3f81fc354871de149c51a361d057c2bd530e530b506b05bb8080d73a8bb0049b
