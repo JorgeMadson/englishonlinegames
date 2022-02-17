@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/no-multiple-template-root -->
 <template>
   <main class="main-game">
     <button
@@ -26,6 +27,18 @@
       </div>
     </div>
   </main>
+  <section
+    class="comments"
+    aria-labelledby="comment"
+  >
+    <h2 id="comment">
+      Comments
+    </h2>
+    <Disqus
+      shortname="englishonlinegames"
+      :page-config="pageConfig"
+    />
+  </section>
 </template>
 
 <script>
@@ -63,6 +76,10 @@ export default {
   data() {
     return {
       wordsList: shuffle(fullList).slice(0, 9),
+      pageConfig: {
+      title: 'TicTacToe',
+      category_id: 'game'
+    }
     };
   },
   methods: {
