@@ -6,8 +6,6 @@
       path="tictactoe"
       :developed="true"
     />
-    <game-card title="Ordinal Numbers" />
-    <game-card />
     <home-footer />
   </main>
   <section
