@@ -2,58 +2,42 @@
 <template>
   <h1>Create your game, to challenge a friend!</h1>
   <div class="container">
-    <fieldset>
-      <legend>What is the time of question?</legend>
-      <input
-        type="radio"
-        name="question_type"
-        value="qa"
-        v-model="question"
-      />Question & Answer<br />
-      <input
-        type="radio"
-        name="question_type"
-        value="puzzle"
-        v-model="question"
-      />Puzzle<br />
-      <input
-        type="radio"
-        name="question_type"
-        value="multiplechoice"
-        v-model="question"
-      />Multiple Choice<br />
+    <fieldset class="direction-column">
+      <legend>What is the type of question?</legend>
+      <span>
+        <input type="radio" name="question_type" value="qa" id="qa" v-model="question" />
+        <label for="qa">Question & Answer</label>
+      </span>
+      <span>
+        <input type="radio" name="question_type" value="puzzle" id="puzzle" v-model="question" />
+        <label for="puzzle">Puzzle</label>
+      </span>
+      <span>
+        <input type="radio" name="question_type" value="mc" id="multiplechoice" v-model="question" />
+        <label for="multiplechoice">Multiple Choice</label>
+      </span>
       <button @click="addToGame(question)">Add</button>
-      <p>Number of questions: {{game.length}}</p>
+      <p>Number of questions: {{ game.length }}</p>
     </fieldset>
     <div>
       <p>Here is to show how the game will look like:</p>
-
-      <fieldset v-for="question in game">
-        <div v-if="question === 'qa'">
-          <label for="question">Question</label> <br />
-          <input type="text" name="answer" id="" placeholder="Corret answer" />
-          <input type="text" name="hint" id="" placeholder="Hint" />
-        </div>
-        <div v-if="question === 'multiplechoice'">
-          <label for="question">Choose</label>
-          <input type="radio" name="question" id=""> 1
-          <input type="radio" name="question" id=""> 2
-          <input type="radio" name="question" id=""> 3
-        </div>
-        <div v-if="question === 'puzzle'">
-          <p>Puzzle</p>
-        </div>
-      </fieldset>
+      <created-question
+        v-for="(question, index) in game" 
+        :question="question"
+        :key="index"
+      />
     </div>
   </div>
-
   <router-view />
 </template>
 
 <script>
+import CreatedQuestion from '../components/createGame/CreatedQuestion.vue'
 export default {
   name: "Games",
-  components: {},
+  components: {
+    CreatedQuestion
+  },
   data() {
     return {
       game: [],
@@ -71,5 +55,9 @@ export default {
 <style scoped>
 .container {
   display: flex;
+}
+.direction-column {
+  display: flex;
+  flex-direction: column;
 }
 </style>
