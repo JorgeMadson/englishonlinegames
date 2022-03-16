@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-const Test = `<template><h1>teste</h1></template>`;
 
 const routes = [
   {
@@ -10,15 +9,15 @@ const routes = [
 
   },
   {
+    path: '/games/tictactoe', name: 'tictactoe', component: () => import(/* webpackChunkName: "tictactoe" */ '../components//games/TicTacToePronunciation.vue'), 
+  },
+  {
+    path: '/games/:game', name: 'game', component: () => import(/* webpackChunkName: "game" */ '../components//games/GenericGame.vue'), 
+  },
+  {
     path: '/games',
     name: 'games',
     component: () => import(/* webpackChunkName: "games" */ '../views/Games.vue'),
-    children: [
-      { path: '', name: 'games', component: () => import(/* webpackChunkName: "games" */ '../views/Games.vue'), },
-      { path: 'tictactoe', name: 'tictactoe', component: () => import(/* webpackChunkName: "tictactoe" */ '../components//games/TicTacToePronunciation.vue'), },
-      { path: 'teste', name: 'teste', component: Test },
-
-    ]
   }
 ]
 

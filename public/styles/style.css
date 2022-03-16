@@ -15,6 +15,7 @@ body {
     font-style: normal;
     font-weight: 400;
     font-display: swap;
+    font-size: 1rem;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -97,6 +98,7 @@ article.in_development {
     background-color: var(--yellow-color);
     border: none;
     padding: 0 1ch;
+    margin: 1ch;
     text-decoration: none;
     text-transform: uppercase;
     transform: skew(-20deg);
@@ -110,9 +112,6 @@ article.in_development {
     background-color: white;
 }
 
-ul {
-    list-style-type: lower-greek;
-}
 li {
     margin: 2ch;
 }

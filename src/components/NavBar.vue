@@ -21,13 +21,13 @@
         class="button"
         :to="{ name: 'games' }"
       >
-        Solo games
+        Create a game
       </router-link>
       <router-link
         class="button"
         :to="{ name: 'games' }"
       >
-        Class Games
+        Play together
       </router-link>
       <button
         title="Dark mode"
