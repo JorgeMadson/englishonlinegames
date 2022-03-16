@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <fieldset>
+    <legend>usuário que põe</legend>
     <span>
-      <label for="gerado-automaticamente">Pergunta</label>
+      <span contenteditable="true" for="gerado-automaticamente">Pergunta</span>
       <input
         type="text"
         required
@@ -12,8 +13,15 @@
     </span>
     <span>
       <label for="hint">Hint</label>
-      <input type="text" name="hint" id="hint" placeholder="Hint" />
       <div id="dica">{dica}</div>
+      <input type="text" name="hint" id="hint" placeholder="Hint" aria-describedby="dica"/>
     </span>
-  </div>
+  </fieldset>
 </template>
+
+<style scoped>
+fieldset {
+  display: flex;
+  flex-direction: column;
+}
+</style>
