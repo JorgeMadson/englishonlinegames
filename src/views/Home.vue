@@ -6,7 +6,6 @@
       path="tictactoe"
       :developed="true"
     />
-    <home-footer />
   </main>
   <section
     class="comments"
@@ -17,6 +16,7 @@
     </h2>
     <Disqus shortname="englishonlinegames" />
   </section>
+  <home-footer />
 </template>
 
 <script>

@@ -1,7 +1,6 @@
 <template >
     <multiple-choice v-if="question === 'mc'"/>
     <question-answer v-else-if="question === 'qa'"/>
-    <p v-else>é puzzle </p>
 </template>
 
 <script>

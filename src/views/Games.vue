@@ -1,22 +1,18 @@
 <!-- eslint-disable vue/no-multiple-template-root -->
 <template>
   <h1>Create your game, to challenge a friend!</h1>
-  <div class="container">
+  <div>
     <fieldset class="direction-column">
       <legend>What is the type of question?</legend>
       <span>
-        <input type="radio" name="question_type" value="qa" id="qa" v-model="question" />
+        <input class="input" type="radio" name="question_type" value="qa" id="qa" v-model="question" />
         <label for="qa">Question & Answer</label>
       </span>
       <span>
-        <input type="radio" name="question_type" value="puzzle" id="puzzle" v-model="question" />
-        <label for="puzzle">Puzzle</label>
-      </span>
-      <span>
-        <input type="radio" name="question_type" value="mc" id="multiplechoice" v-model="question" />
+        <input class="input" type="radio" name="question_type" value="mc" id="multiplechoice" v-model="question" />
         <label for="multiplechoice">Multiple Choice</label>
       </span>
-      <button @click="addToGame(question)">Add</button>
+      <button class="button small" @click="addToGame(question)">Add</button>
       <p>Number of questions: {{ game.length }}</p>
     </fieldset>
     <div>
@@ -46,15 +42,16 @@ export default {
   },
   methods: {
     addToGame(question) {
-      this.game.push(question);
+      if (question)
+        this.game.push(question);
     },
   },
 };
 </script>
 
 <style scoped>
-.container {
-  display: flex;
+.small {
+  width: 10ch;
 }
 .direction-column {
   display: flex;

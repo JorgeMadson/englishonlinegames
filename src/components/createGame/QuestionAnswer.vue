@@ -1,20 +1,8 @@
 <template>
   <fieldset>
-    <legend>usuário que põe</legend>
+      <legend contenteditable="true" v-bind="question_text">Click me to edit</legend>
     <span>
-      <span contenteditable="true" for="gerado-automaticamente">Pergunta</span>
-      <input
-        type="text"
-        required
-        aria-describedby="dica"
-        name="question-gerada-automaticamente"
-        id="gerado-automaticamente"
-      />
-    </span>
-    <span>
-      <label for="hint">Hint</label>
-      <div id="dica">{dica}</div>
-      <input type="text" name="hint" id="hint" placeholder="Hint" aria-describedby="dica"/>
+      <input type="text" name="hint" id="hint" placeholder="Answer" aria-describedby="dica" v-bind="answer_text"/>
     </span>
   </fieldset>
 </template>
@@ -25,3 +13,7 @@ fieldset {
   flex-direction: column;
 }
 </style>
+<script setup>
+defineProps(["question_text:'oi'", "answer_text"]);
+
+</script>

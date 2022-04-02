@@ -1,8 +1,12 @@
 <template>
   <fieldset>
-    <legend> {name_of_the_question} </legend>
-    <button type="button">Add more options</button>
-    <label for="multiple_choice_1"> {nao_sei} </label>
-    <input type="radio" name="multiple-choice-1-option-1" id="multiple-choice-1"/> ❌
+    <legend contenteditable="true" v-bind="question_text">Click me do edit</legend>
+    <div>
+      <Choice option_text="Click to edit" />
+    </div>
   </fieldset>
 </template>
+<script setup>
+import Choice from "./Choice.vue";
+defineProps(["question_text", "answer_text"]);
+</script>

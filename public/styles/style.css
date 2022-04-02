@@ -3,7 +3,10 @@
     --gray-color:        #b8b4b3;
     --blue-light-color:  #00c4f7;
     --yellow-color:      #FFFF00;
+    --yellow-color-lighter: #FFFF7F; /*LIGHTENED:50%*/
+    --yellow-color-darker: #808000; /*20% darker*/
     --blue-dark-color:   #084581;
+
   }
 
 body {
@@ -30,7 +33,7 @@ body {
 }
 header {
     background-color: var(--blue-light-color);
-    transform: skew(-20deg);
+    transform: skew(-15deg);
     display: flex;
     justify-content: space-around;
     place-items: center;
@@ -93,23 +96,27 @@ article.in_development {
 }
 
 .button {
+    display: inline-block;
     font-size: 1.5rem;
     color: black;
+    border: var(--yellow-color-lighter) 3px outset;
     background-color: var(--yellow-color);
-    border: none;
     padding: 0 1ch;
-    margin: 1ch;
+    margin: 0.7ch 1ch;
     text-decoration: none;
     text-transform: uppercase;
-    transform: skew(-20deg);
-    /* -webkit-transition: background-color .5s ease;
-    -o-transition: background-color .5s ease;
-    transition: background-color .5s ease; */
     box-shadow: 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
-.button:hover {
-    background-color: white;
+
+@media (hover: hover) and (pointer: fine) {
+    .button:hover {
+        transform:  scale(1.1);
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+        -webkit-transition: background-color .5s ease;
+        -o-transition: background-color .5s ease;
+        transition: background-color .5s ease;
+    }
 }
 
 li {
