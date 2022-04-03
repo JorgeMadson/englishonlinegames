@@ -9,15 +9,18 @@ const routes = [
 
   },
   {
-    path: '/games/tictactoe', name: 'tictactoe', component: () => import(/* webpackChunkName: "tictactoe" */ '../components//games/TicTacToePronunciation.vue'), 
+    path: '/games/tictactoe', name: 'tictactoe', component: () => import(/* webpackChunkName: "tictactoe" */ '../components//games/TicTacToePronunciation.vue'),
   },
   {
-    path: '/games/:game', name: 'game', component: () => import(/* webpackChunkName: "game" */ '../components//games/GenericGame.vue'), 
+    path: '/games/:game', name: 'game_id', component: () => import(/* webpackChunkName: "game_id" */ '../components//games/GenericGame.vue'),
   },
   {
-    path: '/games',
-    name: 'games',
-    component: () => import(/* webpackChunkName: "games" */ '../views/Games.vue'),
+    path: '/games/', name: 'games', component: () => import(/* webpackChunkName: "games" */'../views/ListGames.vue'),
+  },
+  {
+    path: '/create_games',
+    name: 'create_games',
+    component: () => import(/* webpackChunkName: "games" */ '../views/CreateGames.vue'),
   }
 ]
 

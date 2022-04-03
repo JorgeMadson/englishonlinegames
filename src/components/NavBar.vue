@@ -11,22 +11,13 @@
       </router-link>
     </div>
     <nav>
-      <router-link
-        class="button"
-        to="/"
-      >
+      <router-link class="button" :to="{name: 'games'}">
         All games
       </router-link>
-      <router-link
-        class="button"
-        :to="{ name: 'games' }"
-      >
+      <router-link class="button" :to="{ name: 'create_games' }">
         Create a game
       </router-link>
-      <router-link
-        class="button"
-        :to="{ name: 'games' }"
-      >
+      <router-link class="button" :to="{ name: 'games' }">
         Play together
       </router-link>
       <button
