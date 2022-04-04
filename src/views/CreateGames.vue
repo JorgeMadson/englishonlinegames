@@ -17,22 +17,26 @@
     </fieldset>
     <div>
       <p>Here is to show how the game will look like:</p>
+      <save-button/>
+    </div>
       <created-question
+        @remove-question="removeFromGame(index)"
         v-for="(question, index) in game" 
         :question="question"
         :key="index"
       />
-    </div>
   </div>
   <router-view />
 </template>
 
 <script>
+import SaveButton from '../components/createGame/SaveButton.vue'
 import CreatedQuestion from '../components/createGame/CreatedQuestion.vue'
 export default {
   name: "Games",
   components: {
-    CreatedQuestion
+    CreatedQuestion,
+    SaveButton
   },
   data() {
     return {
@@ -45,6 +49,9 @@ export default {
       if (question)
         this.game.push(question);
     },
+    removeFromGame(index){
+      delete this.game[index]
+    }
   },
 };
 </script>

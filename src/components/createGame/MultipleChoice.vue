@@ -4,14 +4,9 @@
       Click me do edit
     </legend>
     <div class="container">
-      <Choice
-        v-for="(answer, index) in choice_list"
-        :question="question"
-        :key="index"
-        option_text="Click to edit"
-      />
+      <Choice v-for="(answer, index) in choice_list" :question="question" :key="index" :option_text="answer"/>
     </div>
-    <SaveButton />
+    <button @click="$emit('remove-question')" class="button small">❌</button>
   </fieldset>
 </template>
 <script setup>

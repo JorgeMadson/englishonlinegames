@@ -108,6 +108,10 @@ article.in_development {
     box-shadow: 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 
+.small {
+    max-width: fit-content;
+    font-size: 1rem;
+  }
 
 @media (hover: hover) and (pointer: fine) {
     .button:hover {

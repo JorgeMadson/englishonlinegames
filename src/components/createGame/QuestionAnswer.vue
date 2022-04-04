@@ -6,7 +6,7 @@
     <span>
       <input type="text" name="hint" id="hint" placeholder="Answer" aria-roledescription="question answer" v-bind="answer_text"/>
     </span>
-    <save-button/>
+    <button @click="$emit('remove-question')" class="button small">❌</button>
   </fieldset>
 </template>
 

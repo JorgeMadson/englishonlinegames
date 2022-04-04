@@ -15,8 +15,4 @@ name: 'SaveButton'
     display: grid;
     justify-items: end;
 }
-.small {
-  max-width: fit-content;
-  font-size: 1rem;
-}
 </style>
