@@ -14,8 +14,7 @@ export default {
     },
     props:['question'],
     setup(props) {
-        console.log(props.question)
-        var question = props.question
+        var question = props.question;
     },
 }
 </script>
