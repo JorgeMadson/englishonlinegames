@@ -6,7 +6,9 @@
     <div class="container">
       <Choice v-for="(answer, index) in choice_list" :question="question" :key="index" :option_text="answer"/>
     </div>
+    <div class="to-the-left">
     <button @click="$emit('remove-question')" class="button small">❌</button>
+    </div>
   </fieldset>
 </template>
 <script setup>
@@ -21,5 +23,9 @@ const choice_list = reactive(["Answer 1", "Answer 2", "Answer 3", "Answer 4"]);
 .container {
   display: flex;
   flex-direction: column;
+}
+.to-the-left {
+  display: grid;
+  justify-items: end;
 }
 </style>
