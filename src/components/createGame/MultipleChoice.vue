@@ -4,7 +4,7 @@
       Click me do edit
     </legend>
     <div class="container">
-      <Choice v-for="(answer, index) in choice_list" :question="question" :key="index" :option_text="answer"/>
+      <choice v-for="(answer, index) in choice_list" :key="index" :option_text="answer"/>
     </div>
     <div class="to-the-left">
     <button @click="$emit('remove-question')" class="button small">❌</button>
@@ -13,7 +13,6 @@
 </template>
 <script setup>
 import Choice from "./Choice.vue";
-import SaveButton from "./SaveButton.vue";
 import { reactive } from "vue";
 defineProps(["question_text", "answer_text"]);
 

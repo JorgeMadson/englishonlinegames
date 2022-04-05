@@ -17,7 +17,7 @@
     </fieldset>
     <div>
       <p>Here is to show how the game will look like:</p>
-      <save-button/>
+      <save-button v-if="game.length > 0"/>
     </div>
       <created-question
         @remove-question="removeFromGame(index)"
@@ -50,7 +50,7 @@ export default {
         this.game.push(question);
     },
     removeFromGame(index){
-      delete this.game[index]
+      this.game.splice(index,1)
     }
   },
 };

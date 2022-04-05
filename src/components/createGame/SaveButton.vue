@@ -1,6 +1,6 @@
 <template>
     <div class="save-container">
-        <button @click="greet({action: 'save'})" class="small button">💾</button>
+        <button class="small button">💾</button>
     </div>
 </template>
 
